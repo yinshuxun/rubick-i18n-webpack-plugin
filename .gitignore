@@ -1,0 +1,10 @@
+*.project
+.settings
+*DS_Store
+.idea
+node_modules
+yarn-error.log
+yarn.lock
+.vscode/settings.json
+.vscode/chrome
+.cache
