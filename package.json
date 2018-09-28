@@ -1,6 +1,6 @@
 {
   "name": "rubick-i18n-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "main": "index.js",
   "author": "shuxun (https://github.com/yinshuxun)",
   "license": "MIT",
@@ -14,7 +14,8 @@
   "scripts": {
     "gulp": "cross-env NODE_ENV=production gulp --gulpfile ./examples/gulpfile.babel.js",
     "gulp:build": "cross-env NODE_ENV=production gulp build --gulpfile ./examples/gulpfile.babel.js",
-    "dev": "NODE_ENV=development webpack-dev-server --hot --config examples/webpack.config.js --log-level=debug --progress",
+    "dev": "node-nightly --inspect --max_old_space_size=2048 ./node_modules/.bin/webpack-dev-server --config examples/webpack.config.js --log-level=debug --progress --hot --colors",
+    "dev:debug": "node-nightly --inspect --max_old_space_size=2048 ./node_modules/.bin/webpack-dev-server --config examples/webpack.config.js --log-level=debug --progress --hot --colors",
     "build": "NODE_ENV=production webpack --config examples/webpack.config.js --log-level=debug --progress",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
